@@ -14,14 +14,14 @@ import sqlite3 as sql
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(553, 323)
+        MainWindow.resize(712, 461)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QtCore.QSize(553, 323))
-        MainWindow.setMaximumSize(QtCore.QSize(553, 323))
+        MainWindow.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -29,22 +29,22 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(0, 10, 291, 301))
+        self.groupBox.setGeometry(QtCore.QRect(0, 10, 291, 441))
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         self.groupBox.setFont(font)
         self.groupBox.setObjectName("groupBox")
-        self.widget = QtWidgets.QWidget(self.groupBox)
-        self.widget.setGeometry(QtCore.QRect(10, 30, 269, 182))
-        self.widget.setObjectName("widget")
-        self.formLayout = QtWidgets.QFormLayout(self.widget)
+        self.layoutWidget = QtWidgets.QWidget(self.groupBox)
+        self.layoutWidget.setGeometry(QtCore.QRect(10, 30, 269, 181))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.formLayout = QtWidgets.QFormLayout(self.layoutWidget)
         self.formLayout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setRowWrapPolicy(QtWidgets.QFormLayout.WrapAllRows)
         self.formLayout.setContentsMargins(0, 0, 0, 0)
         self.formLayout.setObjectName("formLayout")
-        self.label = QtWidgets.QLabel(self.widget)
+        self.label = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -52,12 +52,12 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
-        self.txtID = QtWidgets.QLineEdit(self.widget)
+        self.txtID = QtWidgets.QLineEdit(self.layoutWidget)
         self.txtID.setEnabled(False)
         self.txtID.setAlignment(QtCore.Qt.AlignCenter)
         self.txtID.setObjectName("txtID")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.txtID)
-        self.label_2 = QtWidgets.QLabel(self.widget)
+        self.label_2 = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -65,12 +65,12 @@ class Ui_MainWindow(object):
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
-        self.txtAd = QtWidgets.QLineEdit(self.widget)
+        self.txtAd = QtWidgets.QLineEdit(self.layoutWidget)
         self.txtAd.setText("")
         self.txtAd.setAlignment(QtCore.Qt.AlignCenter)
         self.txtAd.setObjectName("txtAd")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.txtAd)
-        self.label_3 = QtWidgets.QLabel(self.widget)
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -78,7 +78,7 @@ class Ui_MainWindow(object):
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
-        self.spnStok = QtWidgets.QSpinBox(self.widget)
+        self.spnStok = QtWidgets.QSpinBox(self.layoutWidget)
         self.spnStok.setAlignment(QtCore.Qt.AlignCenter)
         self.spnStok.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
         self.spnStok.setObjectName("spnStok")
@@ -92,8 +92,11 @@ class Ui_MainWindow(object):
         self.btnYeni = QtWidgets.QPushButton(self.groupBox)
         self.btnYeni.setGeometry(QtCore.QRect(10, 220, 131, 71))
         self.btnYeni.setObjectName("btnYeni")
+        self.lblBilgi = QtWidgets.QLabel(self.groupBox)
+        self.lblBilgi.setGeometry(QtCore.QRect(20, 310, 251, 121))
+        self.lblBilgi.setObjectName("lblBilgi")
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(300, 10, 241, 301))
+        self.groupBox_2.setGeometry(QtCore.QRect(300, 10, 401, 441))
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -101,7 +104,7 @@ class Ui_MainWindow(object):
         self.groupBox_2.setFont(font)
         self.groupBox_2.setObjectName("groupBox_2")
         self.listUrunler = QtWidgets.QListWidget(self.groupBox_2)
-        self.listUrunler.setGeometry(QtCore.QRect(10, 70, 221, 221))
+        self.listUrunler.setGeometry(QtCore.QRect(10, 70, 381, 361))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(14)
@@ -109,16 +112,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.listUrunler.setFont(font)
         self.listUrunler.setObjectName("listUrunler")
-        self.widget1 = QtWidgets.QWidget(self.groupBox_2)
-        self.widget1.setGeometry(QtCore.QRect(10, 30, 221, 30))
-        self.widget1.setObjectName("widget1")
-        self.formLayout_2 = QtWidgets.QFormLayout(self.widget1)
+        self.layoutWidget1 = QtWidgets.QWidget(self.groupBox_2)
+        self.layoutWidget1.setGeometry(QtCore.QRect(10, 30, 381, 30))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.formLayout_2 = QtWidgets.QFormLayout(self.layoutWidget1)
         self.formLayout_2.setContentsMargins(0, 0, 0, 0)
         self.formLayout_2.setObjectName("formLayout_2")
-        self.label_4 = QtWidgets.QLabel(self.widget1)
+        self.label_4 = QtWidgets.QLabel(self.layoutWidget1)
         self.label_4.setObjectName("label_4")
         self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label_4)
-        self.txtAra = QtWidgets.QLineEdit(self.widget1)
+        self.txtAra = QtWidgets.QLineEdit(self.layoutWidget1)
         self.txtAra.setObjectName("txtAra")
         self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.txtAra)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -164,7 +167,20 @@ class Ui_MainWindow(object):
         self.listUrunler.clear()
         for urun in self.urunler:
             self.listUrunler.addItem("{} | {} | {}".format(urun[0],urun[1],urun[2]))
+        try:
+            self.lblBilgi.setText("Toplam Ürün : "+str(len(self.urunler))+"\n"
+"Son Ürün;\n"
+"ID : "+str(self.urunler[-1][0])+"\n"
+"Ad : "+str(self.urunler[-1][1])+"\n"
+"STOK : "+str(self.urunler[-1][2])+"")
+        except:
+            self.lblBilgi.setText("Toplam Ürün : 0\n"
+"Son Ürün;\n"
+"ID : -\n"
+"Ad : -\n"
+"STOK : -")
 
+        
     def arama(self,kelime):
         sorgu = "SELECT * FROM urunler WHERE (ad LIKE '%{}%')".format(kelime)
         if(kelime.isnumeric()):
@@ -208,7 +224,6 @@ class Ui_MainWindow(object):
         self.txtAd.setText(str(ad))
         self.spnStok.setValue(stok)
         self.yeniKayit = False
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Stok Takip"))
@@ -220,6 +235,11 @@ class Ui_MainWindow(object):
         self.btnKaydet.setText(_translate("MainWindow", "Kaydet"))
         self.btnSil.setText(_translate("MainWindow", "Sil"))
         self.btnYeni.setText(_translate("MainWindow", "Yeni"))
+        self.lblBilgi.setText(_translate("MainWindow", "Toplam Ürün : \n"
+"Son Ürün;\n"
+"ID : 000\n"
+"Ad : TEST\n"
+"STOK : 0"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Ürünler"))
         self.label_4.setText(_translate("MainWindow", "Ara"))
 

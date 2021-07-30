@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>553</width>
-    <height>323</height>
+    <width>712</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,8 +24,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>553</width>
-    <height>323</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="font">
@@ -44,7 +44,7 @@
       <x>0</x>
       <y>10</y>
       <width>291</width>
-      <height>301</height>
+      <height>441</height>
      </rect>
     </property>
     <property name="font">
@@ -57,13 +57,13 @@
     <property name="title">
      <string>Ürün</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>30</y>
        <width>269</width>
-       <height>182</height>
+       <height>181</height>
       </rect>
      </property>
      <layout class="QFormLayout" name="formLayout">
@@ -189,14 +189,31 @@
       <string>Yeni</string>
      </property>
     </widget>
+    <widget class="QLabel" name="lblBilgi">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>310</y>
+       <width>251</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Toplam Ürün : 
+Son Ürün;
+ID : 000
+Ad : TEST
+STOK : 0</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
       <x>300</x>
       <y>10</y>
-      <width>241</width>
-      <height>301</height>
+      <width>401</width>
+      <height>441</height>
      </rect>
     </property>
     <property name="font">
@@ -214,8 +231,8 @@
       <rect>
        <x>10</x>
        <y>70</y>
-       <width>221</width>
-       <height>221</height>
+       <width>381</width>
+       <height>361</height>
       </rect>
      </property>
      <property name="font">
@@ -227,12 +244,12 @@
       </font>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>221</width>
+       <width>381</width>
        <height>30</height>
       </rect>
      </property>
