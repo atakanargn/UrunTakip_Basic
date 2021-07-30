@@ -81,6 +81,7 @@ class Ui_MainWindow(object):
         self.spnStok = QtWidgets.QSpinBox(self.layoutWidget)
         self.spnStok.setAlignment(QtCore.Qt.AlignCenter)
         self.spnStok.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
+        self.spnStok.setMaximum(999999999)
         self.spnStok.setObjectName("spnStok")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.spnStok)
         self.btnKaydet = QtWidgets.QPushButton(self.groupBox)

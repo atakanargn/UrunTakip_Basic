@@ -63,7 +63,7 @@
        <x>10</x>
        <y>30</y>
        <width>269</width>
-       <height>181</height>
+       <height>182</height>
       </rect>
      </property>
      <layout class="QFormLayout" name="formLayout">
@@ -146,6 +146,9 @@
         <property name="buttonSymbols">
          <enum>QAbstractSpinBox::PlusMinus</enum>
         </property>
+        <property name="maximum">
+         <number>999999999</number>
+        </property>
        </widget>
       </item>
      </layout>
@@ -197,6 +200,11 @@
        <width>251</width>
        <height>121</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Toplam Ürün : 
